@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	Name         string = "euler"  // name
+	Name         string = "demo"   // name
 	Version      string = "v1.0.0" // verion
 	CommitID     string            // code commit
 	CommitAuthor string            // author
@@ -14,6 +14,8 @@ var (
 	BuildTime    string            // build time
 	BuildNumber  string            // build num
 	BuildJob     string            // build job
+	Args         string            // other args
+	HideArgs     string            // hide args
 )
 
 func Info() map[string]string {
@@ -28,5 +30,6 @@ func Info() map[string]string {
 		"build_time":   time.Unix(buildTime, 0).Format("2006-01-02 15:04:05"),
 		"build_number": BuildNumber,
 		"build_job":    BuildJob,
+		"args":         Args,
 	}
 }
