@@ -17,8 +17,8 @@ PARAM_LDFLAGS="-X 'github.com/illidaris/assembly.CommitID=$(shell git log -1 --p
 -X 'github.com/illidaris/assembly.CommitAuthor=$(shell git log -1 --pretty=format:"%an")'\
 -X 'github.com/illidaris/assembly.CommitTime=$(shell git log -1 --pretty=format:"%cd" --date=unix)'\
 -X 'github.com/illidaris/assembly.BuildTime=$(shell date +%s)'\
--X 'github.com/illidaris/assembly.Args=${ARGS}'"
--X 'github.com/illidaris/assembly.HideArgs=${HIDE_ARGS}'"
+-X 'github.com/illidaris/assembly.Args=${ARGS}'" \
+-X 'github.com/illidaris/assembly.HideArgs=${HIDE_ARGS}'" \
 -X 'github.com/illidaris/assembly.BuildNumber=${BUILD_NUMBER}'\
 -X 'github.com/illidaris/assembly.BuildJob=${JOB_NAME}'"
 
