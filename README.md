@@ -9,14 +9,14 @@ BINARY_NAME_LINUX=$(OUTDIR)/${APP_NAME}
 BINARY_NAME_WIN=$(OUTDIR)/${APP_NAME}.exe
 
 # ldflags
-PARAM_LDFLAGS="-X 'euler/pkg/assembly.CommitID=$(shell git log -1 --pretty=format:"%H")'\
--X 'euler/pkg/assembly.Name=${APP_NAME}'\
--X 'euler/pkg/assembly.Version=${APP_VERSION}'\
--X 'euler/pkg/assembly.CommitAuthor=$(shell git log -1 --pretty=format:"%an")'\
--X 'euler/pkg/assembly.CommitTime=$(shell git log -1 --pretty=format:"%cd" --date=unix)'\
--X 'euler/pkg/assembly.BuildTime=$(shell date +%s)'\
--X 'euler/pkg/assembly.BuildNumber=${BUILD_NUMBER}'\
--X 'euler/pkg/assembly.BuildJob=${JOB_NAME}'"
+PARAM_LDFLAGS="-X 'github.com/illidaris/assembly.CommitID=$(shell git log -1 --pretty=format:"%H")'\
+-X 'github.com/illidaris/assembly.Name=${APP_NAME}'\
+-X 'github.com/illidaris/assembly.Version=${APP_VERSION}'\
+-X 'github.com/illidaris/assembly.CommitAuthor=$(shell git log -1 --pretty=format:"%an")'\
+-X 'github.com/illidaris/assembly.CommitTime=$(shell git log -1 --pretty=format:"%cd" --date=unix)'\
+-X 'github.com/illidaris/assembly.BuildTime=$(shell date +%s)'\
+-X 'github.com/illidaris/assembly.BuildNumber=${BUILD_NUMBER}'\
+-X 'github.com/illidaris/assembly.BuildJob=${JOB_NAME}'"
 
 # linux
 build:
