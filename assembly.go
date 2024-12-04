@@ -32,8 +32,6 @@ func Info() map[string]string {
 		"comit_time":   CommitTime,
 		"build_time":   time.Unix(buildTime, 0).Format("2006-01-02 15:04:05"),
 		"build_number": BuildNumber,
-		"build_job":    BuildJob,
-		"args":         Args,
 	}
 }
 
